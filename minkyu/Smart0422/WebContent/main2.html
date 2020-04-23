@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/buy2.css">
+    <title>Smart Main</title>
+</head>
+<body>
+   <nav>
+        <div class="navLeft"></div>
+        <div class="navCenter"></div>
+        <div class="navRight"></div>
+    </nav>
+    
+    <div class="base">
+     
+       <div class="wrap">
+            <div class="top">
+                <div class="buytop"><img class="topimg" src ="../../img/buytop.png"></div>
+            </div>
+        <div class="surround">
+            <div class="barwrap">  
+               <div class="innerbase"></div>         
+                <div class="bar"><img class="barimg" src="../../img/bar.png" ></div>
+                <div class="bcwrap"><div class="barcon">
+                    <div class="bc"><div class="bct">&nbsp;&nbsp;&nbsp;왜 스마트인가?</div></div>
+                    <div class="bcline"></div>
+                    <div class="bc"><div class="bct2">&nbsp;&nbsp;&nbsp;스마트 신제품</div></div>
+                    <div class="bcline"></div>
+                    <div class="bc"><div class="bct3">&nbsp;&nbsp;&nbsp;교복관리 TIPS</div></div>
+                </div></div>
+            </div>
+           <div class="menubar">
+                <div class="ul">
+                    <a href="../common/uniform">
+                        <div class="first"><div class="text">학교주관 구매제란</div></div></a>
+                    <a href="../common/whySmart">
+                        <div class="second"><div class="text">왜 스마트인가</div></div></a>
+                    <a href="../common/smart">
+                        <div class="first"><div class="text">스마트 신제품</div></div></a>
+                    <a href="../common/tips">
+                        <div class="first"><div class="text">교복관리 TIPS</div></div></a>
+                </div>
+            </div>
+            <div class="menubar2">
+                <span>브랜드 파워</span>
+                <div class="menubar2bar"></div>
+                <span>스마트 품질</span>
+                <div class="menubar2bar"></div>
+                <span>스마트 시스템</span>
+                <div class="menubar2bar"></div>
+                <span>스마티 A/S</span>
+            </div>
+            <div class="line"></div>
+            <div class="textbox">
+               <div class="tbt">
+                    <span>학교주관구매의 바른선택! <br>소비자가 직접 뽑은 최고의 브랜드</span>
+                </div>
+                <div class="tbt2">
+                    <strong>스마트 학생복</strong>
+                </div>
+            </div>
+            <div class="brand">
+                <div class="brandleft">      
+                    <div class="brandlefttext">
+                    <span style="font-size: 45px;">2019년도</span>
+                    <div class="brandleftdown">학교주관구매 1위 브랜드</div></div>
+                </div>
+                <div class="brandright"></div>
+            </div>
+           <div class="one">
+               <div class="oneleft"></div>
+               <div class="oneright"></div>
+           </div>
+            <div class="textbox2">
+               <div class="textbox2inner"> 
+               <div class="tb2t">믿고 입는 스마트</div>
+                <div class="tb2t2">좋은 품질로 교복을 스마트하게 +
+                </div>
+                </div>      
+            </div>
+           <div class="smartbox">
+               <div class="smartboxtop">
+                   <div class="sbtleft"></div>
+                   <div class="sbtright"></div>
+               </div>
+               <div class="smartboxbot">
+                   <div class="sbbfirst"></div>
+                   <div class="sbbsecond"></div>
+                   <div class="sbbthird"></div>
+                   <div class="sbbfourth"></div>
+               </div>
+           </div>
+        
+        </div>
+        </div>
+           
+        </div>
+    
+    <script>
+        $(".base").on("mousewheel", function(e) {
+            var wheel = e.originalEvent.wheelDelta; 
+            var sHeight = $(document).scrollTop();
+
+            if(wheel>0){ // 스크롤 올렸을 때
+                if(sHeight<120){
+                    $("nav").css(
+                        'opacity', '0'
+                    );
+                }
+            } else { // 스크롤 내렸을 때
+                if(sHeight>=0){
+                    $("nav").css(
+                        'opacity', '0.5'
+                    );
+                }
+            } 
+        })
+//        -------------------------------------------------------------
+        var tempF = 0;
+        $(".barimg").click(function(e){
+            if(tempF==0){
+                $(".barcon").css({   
+                    'height': '18vh',
+                });        
+                $(".innerbase").fadeIn(300);
+                 tempF = 1;
+            } else {
+                 $(".barcon").css({   
+                    'height': '0px'
+                });
+                $(".innerbase").fadeOut(300);
+                tempF = 0;
+            }
+            
+        });
+        
+    </script>
+</body>
+</html>

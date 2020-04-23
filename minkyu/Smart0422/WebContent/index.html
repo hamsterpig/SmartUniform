@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>이미지맵 좌표 추출</title>
+	<script>
+		function chkMapXY(e, img, mode){
+
+			var width	= img.offsetWidth;
+			var height	= img.offsetHeight;
+
+			var x = e.clientX + document.body.scrollLeft;
+			var y = e.clientY + document.body.scrollTop;
+			
+			if(mode=='click')
+				alert('x ' + x + ', y ' + y);
+			else if(mode=='move')
+				window.status = 'x ' + x + ', y ' + y;
+			
+		}
+		
+		function setImage(frm){
+			document.getElementById('divImage').style.display='block';
+			document.getElementById('divImage').setAttribute('src',frm.imgurl.value);
+		}
+
+	</script>
+	<style>
+		body {padding:0px;margin:0px;font-size:9pt;background-color:#fff;}
+
+		#divImage {border:0px solid #000; display:none;}
+		#divForm {width:520px;margin:10px;padding:10px;border:5px solid #e10000;background-color:#ffffff;}
+		#divForm .title {font-weight:bold;margin-bottom:2px;}
+		#divForm .inputImg {width:99%;}
+		#divForm .btnSubmit {width:99%;}
+		#divForm form{margin:0px;}
+
+	</style>
+
+</head>
+<body>
+
+	<img id="divImage" onmousemove="chkMapXY(event,this,'move');" onclick="chkMapXY(event,this,'click');" onerror="alert('이미지 로딩 실패')">
+
+	<div id="divForm" style="background-color:#f9f9f9;">
+		<div class="title">[이미지 URL]</div>
+		<form method="get" onsubmit="setImage(this); return false;">
+		<input type="hidden" name="mode" value="view">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td width="65%"><input type="text" class="inputImg" id="inputImg" name="imgurl" value=""></td>
+				<td width="15%"><input type="submit" class="btnSubmit" value="확인"></td>
+			</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
