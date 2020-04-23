@@ -85,7 +85,7 @@ public class SmartController extends HttpServlet {
 			} else if (command.equals("InsertAction.do")) { // 회원가입 액션
 				action = new InsertAction();
 				forward = action.execute(request, response);
-			} else if (command.equals("boardmain.do")) { // 게시판 페이지 메인
+			} else if (command.equals("boardmain.do")) { // 게시판 페이지 메인d
 				action = new Board_Action();
 				forward = action.execute(request, response);
 			} else if (command.equals("Board_AddAction.do")) { // 게시판에 글 추가 액션
