@@ -79,7 +79,7 @@ public class SmartController extends HttpServlet {
 			} else if (command.equals("Logout.do")) { //로그아웃
 				action = new LogoutPage();
 				forward = action.execute(request, response);
-			} else if (command.equals("register.do")) { // 회원가입페이지가기
+			} else if (command.equals("register.do")) { // 회원가입페이지가기d
 				action = new SignupPage();
 				forward = action.execute(request, response);
 			} else if (command.equals("InsertAction.do")) { // 회원가입 액션
