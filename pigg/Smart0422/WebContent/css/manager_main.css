@@ -1,0 +1,143 @@
+
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.base{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    min-height: 120vh;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255,255,255,0);
+    transition: all 0.65s;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+	z-index:50;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top_img{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color:  rgba(212,230,244);
+}
+.main_menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.menu{
+    width: 65%;
+    display: flex;
+    margin-top: 5%;
+    position: relative;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    
+}
+.sub_menu{
+  width: 100%;
+    border-radius: 100px;
+    background-color: rgba(157,157,157);
+    padding: 10px;
+    text-align: center;
+}
+.sub_menu2{
+    display: none;
+    position: absolute;
+    width: 270px;
+    height: 60px;
+    opacity: 0.5;
+    background-color: rgba(157,157,157);
+    border: 0;
+    border-radius: 100px;
+    margin-top: -3.5%;
+    margin-left: -1.6%;
+    
+}
+.main_font{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+.m_font{
+    margin-left: 35%;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+.main_hr{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main_hr hr{
+    width: 100%;
+    border: 3px solid blue;
+}
+    
+
+.bottom{
+    width: 100%;
+    background-color: rgba(47,54,62);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.bo_btn{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+.bo_font{
+    color: rgba(233,233,234);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.bo_l_font{
+    text-align: right;
+}
+.bo_c_font{
+    text-align: center;
+}
+.bo_c_font p{
+    margin-left: 50px;
+}
+.bo_r_font{
+    text-align: right;
+}
+.bo_b_font{
+    color: rgba(233,233,234);
+    font-weight: bold;
+    padding: 2%;
+    letter-spacing: 5px;
+}
+
+.sub_menu > a{
+    text-decoration: none;
+    color: white;
+}
+.sub_menu:hover{
+    background-color: rgba(54,80,171);
+}

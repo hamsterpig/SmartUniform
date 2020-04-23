@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Smart0422">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="mysql-connector-java-5.1.46-bin.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/mysql-connector-java-5.1.46-bin/mysql-connector-java-5.1.46-bin">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-pool-1.6.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/commons-pool-1.6/commons-pool-1.6">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cos.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/cos/cos">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-dbcp-1.4.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/commons-dbcp-1.4/commons-dbcp-1.4">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="activation.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/activation/activation">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jstl-1.2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jstl-1.2/jstl-1.2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.mail.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/javax.mail/javax.mail">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/Smart0422/build/classes"/>
+        <property name="context-root" value="Smart0422"/>
+    </wb-module>
+</project-modules>

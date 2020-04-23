@@ -1,0 +1,203 @@
+
+.navLeft{
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+    margin-left: 1%;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.navLeft > span{
+    text-align: center;
+    font-weight: bold;
+}
+.navCenter{
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navRight{
+    width: 40px;
+    height: 50px;
+    margin-right: 1%;
+}
+.rightMenubar{
+    min-width: 450px;
+    height: 40px;
+    border: 3px solid rgba(0,0,0,1);
+    position: absolute;
+    right: 5%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.65;  
+}
+.rightMenubar > a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+a{
+    color: black;
+    text-decoration : none;
+    font-size: 15px;
+}
+
+.pop_con{
+    width: 100%;
+    height: 100vh;
+    background-color: #3650ab;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 8;
+}
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    display: none;
+}
+.pop_close{
+    display: none;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+	z-index: 10;
+}
+.popBase{
+    margin: 11vh 3% 1% 3%;
+    width: 80%;
+    height: 75vh;
+    background-color: #3650ab;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.popBox{
+    background-color: #2540aa;
+    width: 24%;
+    height: 300px;
+    margin: 2% 4%;
+    border: 2px solid white;  
+}
+.pTitle{
+    font-size: 21px;
+    color: #fff;
+    margin: 5% 4%;
+    font-weight: bold;
+}
+.popBox:hover{
+    background-color: #143099;
+    
+}
+.popBox > hr{
+    margin-left: 10%;
+    width: 20%;
+    background-color: black;
+}
+.popSub{
+    list-style: none;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popSub{
+    margin: 5% 3%;
+}
+.popSub > li{
+    margin: 3% 0;
+}
+.popSub > li > a{
+    color: white;
+    font-weight: bold;
+}
+.popSub > li > a:hover{
+    color: goldenrod;
+}
+.popSub > li > a > img{
+    margin-right: 3%;
+}
+.popTitle2{
+    color: white;
+    font-size: 30px;
+    margin: 3% 0 0 0;
+    width: 100%;
+    margin-left: 5%;
+}
+.mSNS{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.mSNS > a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 1%;
+}
+
+.rightMenubarMobile{
+    display: none;
+    font-size: 30px;
+}
+
+.MmenuView{
+    width: 160px;
+    right: 20px;
+    height: 0px;
+    background-color: #3650ab; /* hover: #172864 */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.MmenuViewList{
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    line-height: 42px;
+    padding: 0 10px;
+}
+.MmenuViewList:hover{
+    background-color: #172864;
+}
+
+
+@media(max-width:1200px){
+    .rightMenubar{
+        display: none;
+    }
+    .rightMenubarMobile{
+        display: block;
+    }
+    .popBox{
+        width: 42%;
+    }
+}
+@media(max-width:800px){
+
+    .popBox{
+        width: 90%;
+    }
+}
