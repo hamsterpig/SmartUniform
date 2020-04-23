@@ -8,134 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
+    <!--  <link rel="stylesheet" href="D:/study/workspace2/Smart0420_1/WebContent/css/main.css"> -->
     <link rel="stylesheet" href="css/mainNav.css">
     <link rel="stylesheet" href="css/reaction.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <title>Smart Main</title>
-<style>
-	    .Mstate{
-	        position: fixed;
-	        z-index: 9;
-	        width: 250px;
-	        height: 200px;
-	        left: 88%;
-	        top: 30%;
-	        background-color: rgba(80,80,255,0.5);
-	        color: white;
-	        padding: 1%;
-	        transition: all 1s;
-	        overflow: hidden;
-	        border-radius: 25px;
-	    }
-	    .MstateC{
-	    	position: fixed;
-	        z-index: 10;
-	        width: 60px;
-	        height: 25px;
-	        left: 97%;
-	        top: 29%;
-	        background-color: orange;
-	        color: white;
-	        border-radius: 25px;
-	        transition: all 1s;
-	    }
-	    .o{
-	    	position: relative;
-	    	width: 25px;
-	    	heigth: 25px;
-	    	background-color: white;
-	    	border-radius: 50%;
-	    	left: 0px;
-	    	transition: all 1s;
-	    }
-	    .aLogin{
-	    	color: red;
-	    	font-size: 20px;
-	    	font-weight: bold;
-	    }
-	   	.btnM{
-	   		width: 50%;
-	   		margin: 1px;
-	   		border: 1px solid black;
-	   		color: black;
-	   		background-color: rgba(0,0,0,0);
-	   		transition: all 0.5s;
-	   		font-size: 1.1em;
-	   		font-weight: 300;
-	   	}
-	   	.btnM:hover{
-	   		background-color: rgba(255,255,255,0.5);
-	   	}
-	   	
-	</style>
 </head>
 <body>
-	<% String id = (String)session.getAttribute("id"); %>
-	<div class="Mstate"> <!-- ---------------------------- -->
-		<div class="guest">
-		 비회원입니다.<br>
-		</div>
-		
-		<div class="member">
-			<%=id %>님 반갑습니다^^
-		</div><br>
-		
-	    <a class="aLogin" href="login.do">로그인 하기</a>
-
-	    <form class="boardmain" action="boardmain.do" method="post"> 
-          	<input class="btnM" type="submit" value="게시판">
-          	<input type="hidden" value="<%=session.getAttribute("id") %>" name="userid">
-        </form>
-        
-        <input class="msgView btnM" type="button" value="쪽지보기"><br>
-        <input class="infoUpdate btnM" type="button" value="정보변경"><br>
-        
-        
-        <input class="btnLogout btnM" type="submit" value="로그아웃" onclick="logout()">
-	 </div>
-	 <div class="MstateC">
-	 	<div class="o">
-	 	ㅇ
-	 	</div>
-	 </div>
-	 <script>
-	 	var mstate = "on";
-	 
-	 	$('.MstateC').click(function(){
-	 		
-	 		if(mstate=="on"){
-	 			mstate = "off";
-	 			$('.o').css('left', '35px');
-	 			$('.MstateC').css('background-color', 'gray');
-		 		$('.Mstate').css({
-		 			'height': '0px',
-		 			'opacity': '0'
-		 		});
-	 		} else{
-	 			mstate = "on";
-	 			$('.o').css('left', '0px');
-	 			$('.MstateC').css('background-color', 'orange');
-		 		$('.Mstate').css({
-		 			'height': '200px',
-		 			'opacity': '1'
-		 		});
-	 		}
-	 	});
-	 	
-	 	var id = "<%=id%>";
-	 	
-	 	if(id=="null"){ // 비회원 상태
-	 		$('.member').css('display', 'none'); // 환영 비활성
-	 		$('.btnLogout').css('display', 'none'); // 로그아웃 비활성
-	 		$('.boardmain').css('display', 'none'); // 게시판 비활성
-	 		$('.msgView').css('display', 'none'); // 쪽지보기
-	 		$('.infoUpdate').css('display', 'none'); // 정보변경
-	 	} else { // 로그인 상태
-	 		$('.guest').css('display', 'none'); // 비회원 비활성
-	 		$('.aLogin').css('display', 'none'); // 로그인 버튼 비활성
-	 	}
-	 	
-	 </script> <!-- ---------------------------- -->
 
 
     <div class="base">
@@ -212,7 +91,7 @@
                        <a href="script:">
                           <div class="pTitle">
                             스마트 TV
-                            </div>
+                            </div> 
                        </a>
                         <hr>
                         <ul class="popSub">
@@ -371,15 +250,39 @@
                     <a href="MoveStyle.do">스마트스타일</a>
                     <a href="main_shop.do">매장/고객센터</a>
                 </div>
+            <form action="boardmain.do" method="post"> 
+            	<input type="submit" value="게시판">
+            	<input type="hidden" value="<%=session.getAttribute("id") %>" name="userid">
+            </form>    
             
-            
+                
+			<form action="login.do" method="post"> 
+				<input class="btnLogin" type="submit" value="로그인">
+			</form>
+			
 			<!-- <form action="logout.do">
 				<input class="btnLogout" type="submit" value="로그아웃">
 			</form> -->
 		
-			
+			<input class="btnLogout" type="submit" value="로그아웃" onclick="logout()">
 				
-			
+			<%
+				
+				if(session.getAttribute("id")!=null){
+					out.print(session.getAttribute("id"));
+			%>
+				<script type="text/javascript">
+					$(".btnLogin").css('display', 'none');
+					alert('<%=session.getAttribute("id") %>님 반갑습니다');
+					$(".btnLogout").css('display','block');
+				</script>
+			<%
+				}else{ %>
+				<script type="text/javascript">
+					$(".btnLogout").css('display','none');
+					
+				</script>
+			<%	}%>
 				<script>
 					function logout(){
 						location.href="Logout.do"		
@@ -806,14 +709,23 @@
 			viewvideo();			
 			cont3fun();
 			cngslide();
-			moveslide();
 		});/*전체 펑션*/
 		
 		function banner1(){
-			$('.banner_1').animate({opacity:'0'},2000,function(){
-				bannerclear2();
-				banner2();
+			$('.bnr1_txt_1').animate({width:'50%'});
+			$('.bnr1_img_1').animate({width:'65%'},500,function(){
+				
+				$('.bnr1_txt_2').animate({left:'10%',opacity:'1'},function(){
+					$('.bnr1_txt_3').animate({left:'10%',opacity:'1'},function(){
+								$('.banner_1').animate({opacity:'0'},2000,function(){
+									bannerclear2();
+									banner2();
+						});
+					});
+				});
+					
 			});
+			
 		}
 		
 		function banner2(){
@@ -867,7 +779,12 @@
 		
 		function bannerclear1(){
 			$('.banner_1').css('opacity','1');
-			
+			$('.bnr1_txt_1').css('width','0');
+			$('.bnr1_img_1').css('width','0');
+			$('.bnr1_txt_2').css('left','0');
+			$('.bnr1_txt_2').css('opacity','0');
+			$('.bnr1_txt_3').css('left','0');
+			$('.bnr1_txt_3').css('opacity','0');
 		}
 		
 		
@@ -948,9 +865,7 @@
 			});	
 			});
 			
-		}
-		
-		
+		}		
 		
         function cngslide(){
 			$('.cngbtn').click(function(){
@@ -969,9 +884,7 @@
 				$('.c2_slide').animate({opacity:'1'},1000);
 			});
 		}
-		/*function moveslide(){
-			$('.c2_slideM:nth-child(1)').animate({marginTop:'-=140px',opacity:'1'});
-		}*/
+		
 		
 		
     </script>

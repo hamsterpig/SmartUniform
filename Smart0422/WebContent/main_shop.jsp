@@ -10,77 +10,8 @@
     <link rel="stylesheet" href="css/shopMain.css">
     <link rel="stylesheet" href="css/mainNav.css">
     <title>Smart Main</title>
-    <style>
-	    .Mstate{
-	        position: fixed;
-	        z-index: 9;
-	        width: 250px;
-	        height: 200px;
-	        left: 88%;
-	        top: 30%;
-	        background-color: rgba(80,80,255,0.5);
-	        color: white;
-	        padding: 1%;
-	        transition: all 1s;
-	        overflow: hidden;
-	    }
-	    .MstateC{
-	    	position: fixed;
-	        z-index: 10;
-	        width: 60px;
-	        height: 25px;
-	        left: 97%;
-	        top: 29%;
-	        background-color: orange;
-	        color: white;
-	        border-radius: 25px;
-	        transition: all 1s;
-	    }
-	    .o{
-	    	position: relative;
-	    	width: 25px;
-	    	heigth: 25px;
-	    	background-color: white;
-	    	border-radius: 50%;
-	    	left: 0px;
-	    	transition: all 1s;
-	    }
-	</style>
 </head>
 <body>
-	<div class="Mstate"> <!-- ---------------------------- -->
-	       비회원입니다.<br>
-	       <a href="login.do">로그인 하기</a>
-	 </div>
-	 <div class="MstateC">
-	 	<div class="o">
-	 	ㅇ
-	 	</div>
-	 </div>
-	 <script>
-	 	var mstate = "on";
-	 
-	 	$('.MstateC').click(function(){
-	 		
-	 		if(mstate=="on"){
-	 			mstate = "off";
-	 			$('.o').css('left', '35px');
-	 			$('.MstateC').css('background-color', 'gray');
-		 		$('.Mstate').css({
-		 			'height': '0px',
-		 			'opacity': '0'
-		 		});
-	 		} else{
-	 			mstate = "on";
-	 			$('.o').css('left', '0px');
-	 			$('.MstateC').css('background-color', 'orange');
-		 		$('.Mstate').css({
-		 			'height': '200px',
-		 			'opacity': '1'
-		 		});
-	 		}
-	 	});
-	 </script> <!-- ---------------------------- -->
     <div class="modal">
         </div>
         <div class="pop_con">
@@ -94,13 +25,13 @@
                        </a>
                         <hr>
                         <ul class="popSub">
-                            <li><a href="main.html">
+                            <li><a href="#">
                                <img src="img/navi_sub_a.png">학교주관 구매제란
                             </a></li>
-                            <li><a href="main2.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">왜 스마트인가
                             </a></li>
-                            <li><a href="main3.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">스마트 신제품
                             </a></li>
                             <li><a href="#">
@@ -116,13 +47,13 @@
                        </a>
                         <hr>
                         <ul class="popSub">
-                            <li><a href="test_1_1.jsp">
+                            <li><a href="#">
                                <img src="img/navi_sub_a.png">소년 스타일
                             </a></li>
-                            <li><a href="test_2_1.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">소녀 스타일
                             </a></li>
-                            <li><a href="test_3_1.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">스타일링 아이템
                             </a></li>
                         </ul>
@@ -195,16 +126,16 @@
                        </a>
                         <hr>
                         <ul class="popSub">
-                            <li><a href="agency_shop.jsp">
+                            <li><a href="#">
                                <img src="img/navi_sub_a.png">매장/고객센터
                             </a></li>
-                            <li><a href="main_shop.jsp">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">매장찾기
                             </a></li>
-                            <li><a href="about_shop.jsp">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">고객문의
                             </a></li>
-                            <li><a href="partnership_shop.jsp">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">업무 제휴문의
                             </a></li>
                         </ul>
@@ -315,7 +246,7 @@
                 <a href="script:" onclick="MmenuView()">
                    <div class="rightMenubarMobile">
                         <i class="fa fa-bars"></i>
-                    </div>
+                    </div>	
                     <div class="MmenuView">
                         <a  class="MmenuViewList" href="#">학교주관구매
                         </a>

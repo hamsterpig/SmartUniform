@@ -20,7 +20,8 @@
 		
 		if(user_id.equals(v.get(i).getId())){
 	%>
-<form action="Board_UpAction.do">
+	<!-- method="post" enctype="multipart/form-data" -->
+<form action="Board_UpAction.do" >
 	제목 : <input type="text" name="title"><br><br><br>
 	내용 : <input type="text" name="content">
 	<input type="hidden" name="id" value="<%=v.get(i).getId()%>">

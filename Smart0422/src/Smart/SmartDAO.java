@@ -257,6 +257,8 @@ public class SmartDAO {
 				dto.setDate(rs.getString("DATE"));
 				dto.setViews(rs.getString("views"));
 				dto.setIsLike(rs.getString("isLike"));
+				dto.setSysname(rs.getString("sysname"));
+				dto.setSaveFolder(rs.getString("savepath"));
 				v.add(dto);
 			}
 			
@@ -286,21 +288,22 @@ public class SmartDAO {
 	
 	
 	/*글쓰기*/
-	public int addBoard(String id ,String nickname,String title , String content ,String sysname , String originname){
+	public int addBoard(BoardDTO dto){
 		int result=0;
 		PreparedStatement pstmt = null;
 		Connection conn =null;
-		String query = "INSERT INTO board VALUES(NULL, 0, 0, 0, ?,?,?,?,null,NOW(),FALSE,?,?)";
+		String query = "INSERT INTO board VALUES(NULL, 0, 0, 0, ?,?,?,?,null,NOW(),FALSE,?,?,?)";
 		
-		try {
+		try {	
 			conn = ds.getConnection();
 			pstmt = conn.prepareStatement(query);
-			pstmt.setString(1,id);
-			pstmt.setString(2,nickname);
-			pstmt.setString(3,title);
-			pstmt.setString(4,content);
-			pstmt.setString(5,sysname);
-			pstmt.setString(6,originname);
+			pstmt.setString(1,dto.getId());
+			pstmt.setString(2,dto.getNickname());
+			pstmt.setString(3,dto.getTitle());
+			pstmt.setString(4,dto.getContent());
+			pstmt.setString(5,dto.getSysname());
+			pstmt.setString(6,dto.getOriginname());
+			pstmt.setString(7,dto.getSaveFolder());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -345,6 +348,8 @@ public class SmartDAO {
 				dto.setIsLike(rs.getString("isLike"));
 				dto.setIsHate(rs.getString("isHate"));
 				dto.setContent(rs.getString("content"));
+				dto.setSysname(rs.getString("sysname"));
+				dto.setSaveFolder(rs.getString("savepath"));
 				v.add(dto);
 			}
 			
@@ -607,17 +612,18 @@ public class SmartDAO {
 		return v;
 	}
 	/* 게시글 삭제 */
-	public int del_board(String id){
+	public int del_board(String id,String idx){
 		int result=0;
 		PreparedStatement pstmt = null;
 		Connection conn =null;
-		String query = "DELETE FROM board WHERE id=?";
+		String query = "DELETE FROM board WHERE id=? and idx=?";
 		
 		
 		try {
 			conn = ds.getConnection();
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1,id);
+			pstmt.setString(2,idx);
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -694,6 +700,9 @@ public class SmartDAO {
 				dto.setDate(rs.getString("DATE"));
 				dto.setViews(rs.getString("views"));
 				dto.setIsLike(rs.getString("isLike"));
+			
+				
+				
 				v.add(dto);
 			}
 			
@@ -720,13 +729,63 @@ public class SmartDAO {
 		}	
 		return v;
 	}
-	
+	/*게시판 삭제할때 셀렉하는 메소드*/
+	public Vector<BoardDTO> SelectBoard_Del(String idx){
+		Vector<BoardDTO> v=new Vector<BoardDTO>();
+		String query = "select * from board where idx=?";
+		Connection conn =null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, idx);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				BoardDTO dto = new BoardDTO();
+				dto.setIdx(rs.getString("idx"));
+				dto.setTitle(rs.getString("title"));
+				dto.setId(rs.getString("id"));
+				dto.setNickname(rs.getString("nickname"));
+				dto.setDate(rs.getString("DATE"));
+				dto.setViews(rs.getString("views"));
+				dto.setIsLike(rs.getString("isLike"));
+				dto.setSysname(rs.getString("sysname"));
+				
+				
+				v.add(dto);
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally{			
+			try {
+				if(rs != null){
+					rs.close();
+				}
+				if(pstmt != null){
+					pstmt.close();
+				}
+				if(conn != null){
+					conn.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}	
+		return v;
+	}
 	/*댓글 쓰기*/
 	public int addComment(String board_idx ,String nickname,String id,String content){
 		int result=0;
 		PreparedStatement pstmt = null;
 		Connection conn =null;
-		String query = "INSERT INTO COMMENT VALUES(NULL,?,?,?,?,NOW())";
+		String query = "insert INTO COMMENT VALUES(NULL,?,?,?,?,NOW())";
 		
 		try {
 			conn = ds.getConnection();
@@ -813,7 +872,7 @@ public class SmartDAO {
 				CommentDTO dto = new CommentDTO();
 				dto.setIdx(rs.getString("idx"));
 				dto.setBoard_idx(rs.getString("board_idx"));
-				dto.setNickname(rs.getString("nick_name"));
+				dto.setNickname(rs.getString("nickname"));
 				dto.setContent(rs.getString("content"));
 				dto.setDate(rs.getString("date"));
 				dto.setId(rs.getString("id"));
@@ -1228,7 +1287,7 @@ public class SmartDAO {
 			
 			return ve;
 		}
-		public Vector selectAboutView(){
+		public Vector<ManagerInquiryDTO> selectAboutView(){
 			Vector<ManagerInquiryDTO> ve = new Vector<ManagerInquiryDTO>();
 			String query = "SELECT * FROM inquiry";
 			ResultSet rs= null;
@@ -1245,11 +1304,13 @@ public class SmartDAO {
 					dto.setPhone(rs.getString(3));
 					dto.setEmail(rs.getString(4));
 					dto.setCompany(rs.getString(5));
-					dto.setType(rs.getString(6));
-					dto.setTitle(rs.getString(7));
-					dto.setContent(rs.getString(8));
-					dto.setImg(rs.getString(9));
-					dto.setDate(rs.getString(10));
+					dto.setAgency(rs.getString(6));
+					dto.setType(rs.getString(7));
+					dto.setTitle(rs.getString(8));
+					dto.setContent(rs.getString(9));
+					dto.setOriginimg(rs.getString(10));
+					dto.setDate(rs.getString(11));
+					
 					
 					ve.add(dto);
 
@@ -1280,7 +1341,7 @@ public class SmartDAO {
 					dto.setType(rs.getString(6));
 					dto.setTitle(rs.getString(7));
 					dto.setContent(rs.getString(8));
-					dto.setImg(rs.getString(9));
+					dto.setOriginimg(rs.getString(9));
 					dto.setDate(rs.getString(10));
 					
 					ve.add(dto);
@@ -1367,7 +1428,9 @@ public class SmartDAO {
 					dto.setIdx(rs.getString("idx"));
 					dto.setId(rs.getString("id"));
 					dto.setTitle(rs.getString("title"));
+					dto.setOriginimg(rs.getString("originimg"));
 					dto.setContent(rs.getString("content"));
+					
 					
 					ve.add(dto);
 				}
@@ -1397,11 +1460,11 @@ public class SmartDAO {
 			}
 			return result;
 		}
-		public int Inquiry(String name,String tel,String email,String school,String agency,String type,String title,String content,String originname){
+		public int Inquiry_about(String name,String tel,String email,String school,String agency,String type,String title,String content,String originimg){
 			int result=0;
 			PreparedStatement pstmt = null;
 			Connection conn =null;
-			String query = "insert into customer values(null,?,?,?,?,?,?,?,?,?)";
+			String query = "insert into inquiry values(null,?,?,?,?,?,?,?,?,?,now())";
 			
 			try {
 				conn = ds.getConnection();
@@ -1414,7 +1477,7 @@ public class SmartDAO {
 				pstmt.setString(6,type);
 				pstmt.setString(7,title);
 				pstmt.setString(8,content);
-				pstmt.setString(9,originname);	
+				pstmt.setString(9,originimg);	
 				pstmt.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();

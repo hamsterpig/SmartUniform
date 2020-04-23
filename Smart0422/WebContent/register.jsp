@@ -12,7 +12,7 @@
 	if(session.getAttribute("loginid") !=null){//로그인이 됫을때 
 %>
 	<script>
-		alert("로그인을 한 후에는 접속을 할 수 없는 페이지 입니다.");
+		alert("로그인을 한 ㅜㅎ에는 접속을 할 수 없는 페이지 입니다.");
 		location.href="NewFile.jsp";
 	</script>
 <%} %>

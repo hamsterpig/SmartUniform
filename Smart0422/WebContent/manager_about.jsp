@@ -68,11 +68,12 @@
                     <th></th><th>이름</th><th>전화번호</th><th>이메일</th><th>회사명</th><th>분류</th><th>제목</th><th>이미지</th><th>날짜</th>
                 </tr>
                 <%
+                		System.out.println("1");
                 		boolean isClient = false;
           			      SmartDAO dao  =new SmartDAO();
                 		Vector<ManagerInquiryDTO> ve = (Vector<ManagerInquiryDTO>)request.getAttribute("inquiry");
                 		for(int i=0; i<ve.size(); i++){
-                			
+                			System.out.println("2");	
                 			String type =ve.get(i).getType();
                         	String[] type_arr=type.split("@");
                         	
@@ -84,6 +85,7 @@
                         	}
                         	
                         	if(isClient){
+                        		System.out.println("5");
                         		type_arr=ve.get(i).getType().split("@");
                         		String tmp =type_arr[0];
                         		%>
@@ -93,10 +95,13 @@
 				                    <td><%=ve.get(i).getPhone() %></td>
 				                    <td><%=ve.get(i).getEmail() %></td>
 				                    <td><%=ve.get(i).getCompany() %></td>
+				                    <td><%=ve.get(i).getAgency() %></td>
 				                    <td><%=tmp%></td>
 				                    <td><%=ve.get(i).getTitle() %>
-				                    <td><%=ve.get(i).getImg() %></td>
+				                    <td><%=ve.get(i).getContent() %>
+				                    <td><%=ve.get(i).getOriginimg()%></td>
 				                    <td><%=ve.get(i).getDate()%></td>
+				                 
 				                </tr>
                         		
                         	<% } %>

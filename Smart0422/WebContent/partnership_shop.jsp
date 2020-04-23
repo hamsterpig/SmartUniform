@@ -6,8 +6,8 @@
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/mainNav.css">
-    <link rel="stylesheet" href="css/partnership.css">
+    <link rel="stylesheet" href="../../css/mainNav.css">
+    <link rel="stylesheet" href="../../css/partnership.css">
     <title>Partnership_shop</title>
 </head>
 <body>
@@ -25,16 +25,16 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">학교주관 구매제란
+                               <img src="../../img/navi_sub_a.png">학교주관 구매제란
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">왜 스마트인가
+                                <img src="../../img/navi_sub_a.png">왜 스마트인가
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">스마트 신제품
+                                <img src="../../img/navi_sub_a.png">스마트 신제품
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">교복관리 TIPS
+                                <img src="../../img/navi_sub_a.png">교복관리 TIPS
                             </a></li>
                         </ul>
                     </div>
@@ -47,13 +47,13 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">소년 스타일
+                               <img src="../../img/navi_sub_a.png">소년 스타일
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">소녀 스타일
+                                <img src="../../img/navi_sub_a.png">소녀 스타일
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">스타일링 아이템
+                                <img src="../../img/navi_sub_a.png">스타일링 아이템
                             </a></li>
                         </ul>
                     </div>
@@ -66,16 +66,16 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">2020 스마트 화보
+                               <img src="../../img/navi_sub_a.png">2020 스마트 화보
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">2020 소년 룩북
+                                <img src="../../img/navi_sub_a.png">2020 소년 룩북
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">2020 소녀 룩북
+                                <img src="../../img/navi_sub_a.png">2020 소녀 룩북
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">화보 갤러리
+                                <img src="../../img/navi_sub_a.png">화보 갤러리
                             </a></li>
                         </ul>
                     </div>
@@ -88,32 +88,13 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">채널 스마트
+                               <img src="../../img/navi_sub_a.png">채널 스마트
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">스마트 필름
+                                <img src="../../img/navi_sub_a.png">스마트 필름
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">온에어
-                            </a></li>
-                        </ul>
-                    </div>
-                    <div class="popBox">
-                       <a href="script:">
-                          <div class="pTitle">
-                            학교주관 구매제
-                            </div> 
-                       </a>
-                        <hr>
-                        <ul class="popSub">
-                            <li><a href="#">
-                               <img src="img/navi_sub_a.png">스마트 플레이
-                            </a></li>
-                            <li><a href="#">
-                                <img src="img/navi_sub_a.png">이벤트
-                            </a></li>
-                            <li><a href="#">
-                                <img src="img/navi_sub_a.png">월페이퍼
+                                <img src="../../img/navi_sub_a.png">온에어
                             </a></li>
                         </ul>
                     </div>
@@ -126,16 +107,35 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">매장/고객센터
+                               <img src="../../img/navi_sub_a.png">스마트 플레이
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">매장찾기
+                                <img src="../../img/navi_sub_a.png">이벤트
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">고객문의
+                                <img src="../../img/navi_sub_a.png">월페이퍼
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="popBox">
+                       <a href="script:">
+                          <div class="pTitle">
+                            학교주관 구매제
+                            </div> 
+                       </a>
+                        <hr>
+                        <ul class="popSub">
+                            <li><a href="#">
+                               <img src="../../img/navi_sub_a.png">매장/고객센터
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">업무 제휴문의
+                                <img src="../../img/navi_sub_a.png">매장찾기
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../../img/navi_sub_a.png">고객문의
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../../img/navi_sub_a.png">업무 제휴문의
                             </a></li>
                         </ul>
                     </div>
@@ -149,19 +149,19 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">S'FD 회사소개
+                               <img src="../../img/navi_sub_a.png">S'FD 회사소개
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">CI
+                                <img src="../../img/navi_sub_a.png">CI
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">인재채용
+                                <img src="../../img/navi_sub_a.png">인재채용
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">복리후생
+                                <img src="../../img/navi_sub_a.png">복리후생
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">리틀스마트
+                                <img src="../../img/navi_sub_a.png">리틀스마트
                             </a></li>
                         </ul>
                     </div>
@@ -174,22 +174,22 @@
                         <hr>
                         <ul class="popSub">
                             <li><a href="#">
-                               <img src="img/navi_sub_a.png">스마트소개
+                               <img src="../../img/navi_sub_a.png">스마트소개
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">수상연혁
+                                <img src="../../img/navi_sub_a.png">수상연혁
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">사회공헌
+                                <img src="../../img/navi_sub_a.png">사회공헌
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">글로벌 네트워크
+                                <img src="../../img/navi_sub_a.png">글로벌 네트워크
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">언론보도
+                                <img src="../../img/navi_sub_a.png">언론보도
                             </a></li>
                             <li><a href="#">
-                                <img src="img/navi_sub_a.png">모델 히스토라
+                                <img src="../../img/navi_sub_a.png">모델 히스토라
                             </a></li>
                         </ul>
                     </div>
@@ -198,22 +198,22 @@
            </div>
             <div class="mSNS">
                 <a href="http://www.facebook.com">
-                    <img src="img/icon_facebook.png">
+                    <img src="../../img/icon_facebook.png">
                 </a>
                 <a href="http://www.facebook.com">
-                    <img src="img/ico_youtube.png">
+                    <img src="../../img/ico_youtube.png">
                 </a>
                 <a href="http://www.facebook.com">
-                    <img src="img/ico_twitter.png">
+                    <img src="../../img/ico_twitter.png">
                 </a>
                 <a href="http://www.facebook.com">
-                    <img src="img/ico_story.png">
+                    <img src="../../img/ico_story.png">
                 </a>
                 <a href="http://www.facebook.com">
-                    <img src="img/ico_nblog.png">
+                    <img src="../../img/ico_nblog.png">
                 </a>
                 <a href="http://www.facebook.com">
-                    <img src="img/ico_instargram.png">
+                    <img src="../../img/ico_instargram.png">
                 </a>
             </div>
         </div>
@@ -233,7 +233,7 @@
             </div>
             <div class="navCenter">
                 <a href="main.html">
-                    <img class="logoImg" src="img/logo.png">
+                    <img class="logoImg" src="../../img/logo.png">
                 </a>
             </div>
             <div class="navRight">
@@ -263,7 +263,7 @@
       
        <div class="wrap">
           <div class="top_img">
-            <div class="t_img"><img src="img/main_topbanner.png"></div>
+            <div class="t_img"><img src="../../img/main_topbanner.png"></div>
           </div>
 
            <div class="main_menu"> 
@@ -312,7 +312,7 @@
         <div class="center">
             <div class="middle">
                 <div class="md_l_man">
-                    <img src="img/partnership_man.png">
+                    <img src="../../img/partnership_man.png">
                 </div>
                 
                 <div class="md_r_box">
@@ -332,19 +332,19 @@
                         <div class="title_menu">
                             <div class="title_sub">
                                <div>
-                                    <input type="radio" value="title_radio">제품관련
+                                    <input type="radio" value="product@work">제품생산
                                </div>
                                <div>
-                                   <input type="radio" value="title_radio">매장이용관련
+                                   <input type="radio" value="material@work">원단
                                </div>
                                <div>
-                                   <input type="radio" value="title_radio">구입관련
+                                   <input type="radio" value="online@work">온라인
                                </div>
                                <div>
-                                   <input type="radio" value="title_radio">홈페이지관련
+                                   <input type="radio" value="marketing@work">마케팅
                                </div>    
                                <div>
-                                   <input type="radio" value="title_radio">기타
+                                   <input type="radio" value="others@work">기타용품
                                </div>
                             </div>    
                         </div>
@@ -406,12 +406,12 @@
        
             <div class="bottom">
                <div class="bo_btn">
-                    <a href="https://www.facebook.com/smartzzang"><div><img src="img/icon_c_facebook.png"></div></a>
-                    <a href="https://twitter.com/smart_zzang"><div><img src="img/icon_c_tittwer.png"></div></a>
-                    <a href="https://blog.naver.com/smartfnd"><div><img src="img/icon_c_naverblog.png"></div></a>
-                    <a href="https://www.youtube.com/channel/UC9Pfm_o3Y3OgtpFXUIvsV7w?feature=watch"><div><img src="img/icon_c_youtube.png"></div></a>
-                    <a href="https://www.instagram.com/ilovesmart/"><div><img src="img/icon_c_instargram.png"></div></a>
-                    <a href="https://story.kakao.com/ch/smartfnd"><div><img src="img/icon_c_kakaostory.png"></div></a>
+                    <a href="https://www.facebook.com/smartzzang"><div><img src="../../img/icon_c_facebook.png"></div></a>
+                    <a href="https://twitter.com/smart_zzang"><div><img src="../../img/icon_c_tittwer.png"></div></a>
+                    <a href="https://blog.naver.com/smartfnd"><div><img src="../../img/icon_c_naverblog.png"></div></a>
+                    <a href="https://www.youtube.com/channel/UC9Pfm_o3Y3OgtpFXUIvsV7w?feature=watch"><div><img src="../../img/icon_c_youtube.png"></div></a>
+                    <a href="https://www.instagram.com/ilovesmart/"><div><img src="../../img/icon_c_instargram.png"></div></a>
+                    <a href="https://story.kakao.com/ch/smartfnd"><div><img src="../../img/icon_c_kakaostory.png"></div></a>
                 </div>
                 
                 <div class="bo_font">
@@ -504,7 +504,7 @@
             $("nav").css('z-index', '10');
             $(".pop_close").css('display', 'block');
             $(".btnPop").css('display', 'none');
-            $(".logoImg").attr('src', 'img/logo_on.png');
+            $(".logoImg").attr('src', '../../img/logo_on.png');
             $('.navLeft').css('border', '0px solid black');
             $('.rightMenubar').css('border', '3px solid white');
             $('.rightMenubar > a').css('color', 'white');
@@ -517,7 +517,7 @@
             $("nav").css('z-index', '10');
             $(".pop_close").css('display', 'none');
             $(".btnPop").css('display', 'block');
-            $(".logoImg").attr('src', 'img/logo.png');
+            $(".logoImg").attr('src', '../../img/logo.png');
             $('.navLeft').css('border', '3px solid black');
             $('.rightMenubar').css('border', '3px solid black');
             $('.rightMenubar > a').css('color', 'black');

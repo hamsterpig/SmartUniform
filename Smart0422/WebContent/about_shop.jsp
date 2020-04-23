@@ -25,13 +25,13 @@
                        </a>
                         <hr>
                         <ul class="popSub">
-                            <li><a href="main.html">
+                            <li><a href="#">
                                <img src="img/navi_sub_a.png">학교주관 구매제란
                             </a></li>
-                            <li><a href="main2.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">왜 스마트인가
                             </a></li>
-                            <li><a href="main3.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">스마트 신제품
                             </a></li>
                             <li><a href="#">
@@ -47,13 +47,13 @@
                        </a>
                         <hr>
                         <ul class="popSub">
-                            <li><a href="test_1_1.jsp">
+                            <li><a href="#">
                                <img src="img/navi_sub_a.png">소년 스타일
                             </a></li>
-                            <li><a href="test_2_1.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">소녀 스타일
                             </a></li>
-                            <li><a href="test_3_1.html">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">스타일링 아이템
                             </a></li>
                         </ul>
@@ -126,16 +126,16 @@
                        </a>
                         <hr>
                         <ul class="popSub">
-                            <li><a href="agency_shop.jsp">
+                            <li><a href="#">
                                <img src="img/navi_sub_a.png">매장/고객센터
                             </a></li>
-                            <li><a href="main_shop.jsp">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">매장찾기
                             </a></li>
-                            <li><a href="about_shop.jsp">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">고객문의
                             </a></li>
-                            <li><a href="partnership_shop.jsp">
+                            <li><a href="#">
                                 <img src="img/navi_sub_a.png">업무 제휴문의
                             </a></li>
                         </ul>
@@ -351,19 +351,19 @@
                         <div class="title_menu">
                             <div class="title_sub">
                                <div>
-                                    <input type="radio" value="product" name="type">제품관련
+                                    <input type="radio" value="product@client" name="type">제품관련
                                </div>
                                <div>
-                                   <input type="radio" value="agency" name="type">매장이용관련
+                                   <input type="radio" value="agency@client" name="type">매장이용관련
                                </div>
                                <div>
-                                   <input type="radio" value="buy" name="type">구입관련
+                                   <input type="radio" value="buy@client" name="type">구입관련
                                </div>
                                <div>
-                                   <input type="radio" value="homepage" name="type">홈페이지관련
+                                   <input type="radio" value="homepage@client" name="type">홈페이지관련
                                </div>    
                                <div>
-                                   <input type="radio" value="others" name="type">기타
+                                   <input type="radio" value="others@client" name="type">기타
                                </div>
                             </div>    
                         </div>

@@ -37,15 +37,17 @@ public class ShopFileUploadAction  implements Action{
 			String title = mrequest.getParameter("title");
 			String content = mrequest.getParameter("content");
 			
-			String originname="";
-			dao.Inquiry(name, tel, email, school, agency, type, title, content, originname);	
+			
+			String originimg="";
+				
 			
 			Enumeration files = mrequest.getFileNames();
 			while(files.hasMoreElements()){
 				String fname=(String)files.nextElement();
-				originname=mrequest.getOriginalFileName(fname);
+				originimg=mrequest.getOriginalFileName(fname);
 				
 			}
+			dao.Inquiry_about(name, tel, email, school, agency, type, title, content, originimg);
 			
 			
 			
@@ -54,7 +56,7 @@ public class ShopFileUploadAction  implements Action{
 			System.out.println("이메일"+email);
 			System.out.println("학교명"+school);
 			System.out.println("대리점"+agency);
-			System.out.println("원래 파일명"+originname);
+
 	
 			
 		}catch(IOException ioe){

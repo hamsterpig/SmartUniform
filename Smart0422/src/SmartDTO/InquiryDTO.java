@@ -7,19 +7,25 @@ public class InquiryDTO {
 	private String tel;
 	private String email;
 	private String school;
+	private String agency;
+	private String type;
+	private String title;
+	private String content; 
+	private String date;
+	private String originname;
 	
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
 	public String getSchool() {
 		return school;
 	}
 	public void setSchool(String school) {
 		this.school = school;
 	}
-	private String agency;
-	private String type;
-	private String title;
-	private String content;
-	private String originname;
-
 
 	public String getOriginname() {
 		return originname;

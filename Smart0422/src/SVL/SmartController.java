@@ -42,7 +42,7 @@ public class SmartController extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)d
+	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -67,7 +67,7 @@ public class SmartController extends HttpServlet {
 		System.out.println(test);
 
 		try {
-			 if (command.equals("main.do")) { // 메인페이지
+			 if (command.equals("main.do")) { // 메인페이지0d
 				action = new MainGo();
 				forward = action.execute(request, response);
 			} else if (command.equals("login.do")) { // 로그인페이지가기
@@ -79,13 +79,13 @@ public class SmartController extends HttpServlet {
 			} else if (command.equals("Logout.do")) { //로그아웃
 				action = new LogoutPage();
 				forward = action.execute(request, response);
-			} else if (command.equals("register.do")) { // 회원가입페이지가기d
+			} else if (command.equals("register.do")) { // 회원가입페이지가기
 				action = new SignupPage();
 				forward = action.execute(request, response);
 			} else if (command.equals("InsertAction.do")) { // 회원가입 액션
 				action = new InsertAction();
 				forward = action.execute(request, response);
-			} else if (command.equals("boardmain.do")) { // 게시판 페이지 메인d
+			} else if (command.equals("boardmain.do")) { // 게시판 페이지 메인
 				action = new Board_Action();
 				forward = action.execute(request, response);
 			} else if (command.equals("Board_AddAction.do")) { // 게시판에 글 추가 액션
@@ -94,7 +94,7 @@ public class SmartController extends HttpServlet {
 			} else if (command.equals("Board_AddPage.do")) { // 글쓰기 눌렀을때 페이지 액션
 				action = new Board_AddPage();
 				forward = action.execute(request, response);
-			} else if (command.equals("Board_ViewAction.do")) { // 게시글 눌렀을때
+			} else if (command.equals("Board_ViewAction.do")) { // 게시물 보기
 				action = new Board_ViewAction();
 				forward = action.execute(request, response);
 			} else if (command.equals("del_board.do")) { // 게시글 삭제

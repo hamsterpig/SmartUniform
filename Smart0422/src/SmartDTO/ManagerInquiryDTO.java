@@ -6,10 +6,11 @@ public class ManagerInquiryDTO {
  private String phone;
  private String email;
  private String company;
+ private String agency;
  private String type;
  private String title;
  private String content;
- private String img;
+ private String originimg;
  private String date;
 public String getIdx() {
 	return idx;
@@ -41,6 +42,12 @@ public String getCompany() {
 public void setCompany(String company) {
 	this.company = company;
 }
+public String getAgency() {
+	return agency;
+}
+public void setAgency(String agency) {
+	this.agency = agency;
+}
 public String getType() {
 	return type;
 }
@@ -59,11 +66,11 @@ public String getContent() {
 public void setContent(String content) {
 	this.content = content;
 }
-public String getImg() {
-	return img;
+public String getOriginimg() {
+	return originimg;
 }
-public void setImg(String img) {
-	this.img = img;
+public void setOriginimg(String originimg) {
+	this.originimg = originimg;
 }
 public String getDate() {
 	return date;
@@ -71,5 +78,6 @@ public String getDate() {
 public void setDate(String date) {
 	this.date = date;
 }
+ 
  
 }

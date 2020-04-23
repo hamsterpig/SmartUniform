@@ -15,13 +15,15 @@ import Smart.SmartDAO;
 import SmartDTO.BoardDTO;
 import action.Action;
 import action.ActionForward;
+import action.PublicValue;
 
 public class Board_AddAction implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		String saveFolder = request.getSession().getServletContext().getRealPath("files");
+		String saveFolder = PublicValue.SAVEFOLDER;
+		
 		int maxSize = 1024*1024*20;
 		String encType="euc-kr";
 		
@@ -43,6 +45,7 @@ public class Board_AddAction implements Action{
 		System.out.println(id);
 		System.out.println(originname);
 		System.out.println(sysname);
+		System.out.println(saveFolder);
 		System.out.println("------------------");
 		
 		Enumeration files = mrequest.getFileNames();
@@ -52,8 +55,18 @@ public class Board_AddAction implements Action{
 			sysname=mrequest.getFilesystemName(fname);
 		}	
 		
+		
+		BoardDTO dto = new BoardDTO();
+		dto.setId(id);
+		dto.setNickname(nickname);
+		dto.setTitle(title);
+		dto.setContent(content);
+		dto.setSysname(sysname);
+		dto.setOriginname(originname);
+		dto.setSaveFolder(saveFolder);
+		System.out.println(saveFolder);
 		SmartDAO dao = new SmartDAO();
-		dao.addBoard(id ,nickname, title, content ,sysname ,originname);
+		dao.addBoard(dto);
 			
 		
 		}catch(IOException e){

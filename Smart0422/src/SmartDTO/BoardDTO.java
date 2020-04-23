@@ -12,6 +12,9 @@ public class BoardDTO {
 	private String date;
 	private boolean notice;
 	private String nickname;
+	private String sysname;
+	private String originname;
+	private String SaveFolder;
 	
 	
 	
@@ -19,8 +22,24 @@ public class BoardDTO {
 	
 	
 	
-	
-	
+	public String getSaveFolder() {
+		return SaveFolder;
+	}
+	public void setSaveFolder(String saveFolder) {
+		SaveFolder = saveFolder;
+	}
+	public String getSysname() {
+		return sysname;
+	}
+	public void setSysname(String sysname) {
+		this.sysname = sysname;
+	}
+	public String getOriginname() {
+		return originname;
+	}
+	public void setOriginname(String originname) {
+		this.originname = originname;
+	}
 	public String getNickname() {
 		return nickname;
 	}

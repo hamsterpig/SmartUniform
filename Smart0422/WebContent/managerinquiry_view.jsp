@@ -12,7 +12,7 @@
 <body>
 		<div>
 		<%
-				
+				String saveFolder=request.getRealPath("files");
 				String idx = request.getParameter("idx");				
 				SmartDAO dao = new SmartDAO();
 				Vector<ManagerInquiryDTO> ve = dao.selectInquiryIDView(idx);				
@@ -20,6 +20,7 @@
 		<form action="managerReply.do" method="post">
 			글번호:<%=ve.get(0).getIdx() %>
 			글쓴이:<%=ve.get(0).getId() %> &nbsp;제목:<%=ve.get(0).getTitle() %><br>
+			이미지:<img src="<%=saveFolder+ve.get(0).getOriginimg() %>">
 			<input type="hidden" value="<%= ve.get(0).getId()%>" name="hidden_id">
 			<textarea style="width:200px;height:100px"><%=ve.get(0).getContent() %></textarea><br>			
 			<input type="submit">

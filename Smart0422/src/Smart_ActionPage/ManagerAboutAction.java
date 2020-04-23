@@ -21,6 +21,8 @@ public class ManagerAboutAction implements Action {
 		Vector<ManagerInquiryDTO> ve= dao.selectAboutView();
 		request.setAttribute("inquiry",ve);
 		
+		
+		
 		forward.setRedirect(false);
 		forward.setNextPage("manager_about.jsp");
 		return forward;

@@ -95,7 +95,6 @@
 				                    <td><%=ve.get(i).getCompany() %></td>
 				                    <td><%=ve.get(i).getType() %>
 				                    <td><%=tmp%></td>
-				                    <td><%=ve.get(i).getImg() %></td>
 				                    <td><%=ve.get(i).getDate()%></td>
 				                </tr>
                         		

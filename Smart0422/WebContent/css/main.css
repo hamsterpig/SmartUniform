@@ -56,6 +56,52 @@ nav{
 .bnr_img{
 	position: absolute;
 }
+
+.bnr1_img_1{
+	right: 5%;
+	top: 22%;
+	width: 0;
+	/*width: 65%;*/
+	height: auto;
+}
+.bnr1_img_1 >img{
+	width: 100%;
+	height: auto;
+}
+.bnr1_txt_1{
+	right: 8%;
+	top: 8%;
+	width: 0;
+	/*width: 65%;*/
+	height: auto;
+	position: absolute;
+}
+.bnr1_txt_1 >img{
+	width: 100%;
+	height: auto;
+}
+.bnr1_txt_2{
+    font-size: 80px;
+    color: #3650ab;
+    letter-spacing: -3px;
+	left: 5%;
+	top: 23%;
+	text-align:left;
+	opacity: 0;
+}
+.bnr1_txt_3{
+    font-size: 34px;
+    color: #2f363e;
+    line-height: 1.5;
+    letter-spacing: -3px;
+	left: 5%;
+	top: 45%;
+	text-align:left;
+	opacity: 0;
+}
+
+
+
 .bnr2_txt_1{
 	right: 5%;
 	top: 30%;
@@ -120,7 +166,7 @@ nav{
 .bnr4_img_1{
 	top: 25%;
 	right: 0;
-opacity: 0;
+	opacity: 0;
 }
 .bnr4_imggb_1{
 	right: 18%;

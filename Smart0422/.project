@@ -3,13 +3,6 @@
 	<name>Smart0422</name>
 	<comment></comment>
 	<projects>
-		<project>mysql-connector-java-5.1.46-bin</project>
-		<project>commons-pool-1.6</project>
-		<project>cos</project>
-		<project>commons-dbcp-1.4</project>
-		<project>activation</project>
-		<project>jstl-1.2</project>
-		<project>javax.mail</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
